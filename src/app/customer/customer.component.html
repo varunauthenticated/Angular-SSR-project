@@ -1,4 +1,7 @@
-@for (user of users; track $index) {
+<!-- @for (user of users; track $index) {
     <p>{{user.first_name}} {{user.last_name}} - {{user.email}}</p>
   }
   
+  <hr> -->
+  <h4>Add new Customer</h4>
+  <app-add-customer (customerData)="addCustomer($event)" [customerList]="customer" />
