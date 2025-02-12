@@ -1,11 +1,13 @@
 import { Component, EventEmitter, inject, Input, OnInit, Output } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { Customer } from '../../model/customer.model';
 
 @Component({
-  selector: 'app-add-customer',
-  templateUrl: './add-customer.component.html',
-  styleUrl: './add-customer.component.scss'
+    selector: 'app-add-customer',
+    templateUrl: './add-customer.component.html',
+    styleUrl: './add-customer.component.scss',
+    standalone: true,
+    imports: [ReactiveFormsModule]
 })
 export class AddCustomerComponent implements OnInit {
   @Output('customerData') customerData: EventEmitter<Customer> = new EventEmitter<Customer>();

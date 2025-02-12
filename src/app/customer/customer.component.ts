@@ -1,11 +1,14 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { UserService } from '../service/user.service';
 import { Customer } from '../model/customer.model';
+import { AddCustomerComponent } from './add-customer/add-customer.component';
 
 @Component({
-  selector: 'app-customer',
-  templateUrl: './customer.component.html',
-  styleUrl: './customer.component.scss',
+    selector: 'app-customer',
+    templateUrl: './customer.component.html',
+    styleUrl: './customer.component.scss',
+    standalone: true,
+    imports: [AddCustomerComponent],
 })
 export class CustomerComponent implements OnInit {
   service = inject(UserService);

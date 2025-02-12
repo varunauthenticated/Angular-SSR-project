@@ -8,14 +8,12 @@ import { AddCustomerComponent } from './add-customer/add-customer.component';
 
 
 @NgModule({
-  declarations: [
-    CustomerComponent,
-    AddCustomerComponent
-  ],
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    CustomerRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        CustomerRoutingModule,
+        CustomerComponent,
+        AddCustomerComponent
+    ]
 })
 export class CustomerModule { }

@@ -2,9 +2,10 @@ import { Component, inject, OnInit } from '@angular/core';
 import { UserService } from '../service/user.service';
 
 @Component({
-  selector: 'app-user-list',
-  templateUrl: './user-list.component.html',
-  styleUrl: './user-list.component.scss'
+    selector: 'app-user-list',
+    templateUrl: './user-list.component.html',
+    styleUrl: './user-list.component.scss',
+    standalone: true
 })
 export class UserListComponent implements OnInit {
 
